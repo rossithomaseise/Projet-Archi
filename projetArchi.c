@@ -46,11 +46,12 @@
                 NbPhrases+=1;
             }
 
-            if ((caractereActuel=='.')||(caractereActuel=='!')||(caractereActuel=='?')||(caractereActuel==' ')||(caractereActuel=='\n'))     
+            if ((caractereActuel=='.')||(caractereActuel==' ')||(caractereActuel=='\n'))     
             {
                 if ((caractereActuel=='\n'))
                 {
-                    if ((lastCaracter!='?')||(lastCaracter!='!'))
+                    if ((lastCaracter=='?')||(lastCaracter=='!')||(lastCaracter=='\n'));
+                    else
                     {
                         NbMots+=1;
                     }
@@ -60,12 +61,13 @@
                     NbMots+=1;
                 }
             }
+            //printf("%c ---mot %d\n", caractereActuel,NbMots);
 
             lastCaracter=caractereActuel;
 
         } // On continue tant que fgetc n'a pas retourné EOF (fin de fichier)
 
- 		NbLignes+=1;	//Pour compter la derniere ligne
+ 		NbLignes+=1;	//Pour compter la derniere ligne    40
 
         fclose(fichier);
 
