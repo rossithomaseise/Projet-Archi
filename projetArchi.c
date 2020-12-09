@@ -68,7 +68,7 @@
             }
         } // On continue tant que fgetc n'a pas retourné EOF (fin de fichier)
 
- 		NbLignes+=1;	//pour la derniere ligne
+ 		NbLignes+=1;	//Pour compter la derniere ligne
 
         fclose(fichier);
 
