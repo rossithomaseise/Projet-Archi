@@ -2,36 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-// int main()
-// {
-// 	FILE* fichier;
-// 	fichier=fopen("test.txt","r");
-
-// 	char tabC[50];
-// 	int tailleNom=0;
-
-// 	fscanf(fichier,"%s",tabC);
-// 	char* nom = malloc(strlen(tabC)+1);
-// 	tailleNom+=strlen(tabC)+1;//+1 pour l'espace
-// 	strcpy(nom,tabC);
-
-// 	fscanf(fichier,"%s",tabC);
-// 	char* prenom = malloc(strlen(tabC)+1);
-// 	tailleNom+=strlen(tabC)+1;//+1 pour \0
-// 	strcpy(prenom,tabC);
-
-// 	char* toutleNOM = malloc(tailleNom);
-// 	strcpy(toutleNOM,nom);
-// 	strcat(toutleNOM," ");
-// 	strcat(toutleNOM,prenom);
-
-// 	UnIndiv->nom = toutleNOM;
-
-// 	free(nom);
-// 	free(prenom);
-
-
-
 	int main()
 {
     FILE* fichier = NULL;
@@ -77,7 +47,3 @@
  
     return 0;
 }
-
-// 	fclose(fichier);
-// 	return 0;
-// }
