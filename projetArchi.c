@@ -23,10 +23,9 @@
  
     if (fichier != NULL)
     {
-        // Boucle de lecture des caractères un à un
-        while (caractereActuel != EOF)
+        while (caractereActuel != EOF)          // Boucle de lecture des caractères un à un
         {
-            caractereActuel = fgetc(fichier); // On lit le caractère
+            caractereActuel = fgetc(fichier);   // On lit le caractère
 
             if ((caractereActuel=='\n')||(TempLigne==NbCaracLigne))
             {
@@ -56,7 +55,7 @@
                         NbMots+=1;
                     }
                 }
-                else
+                else if ((lastCaracter!='!')&&(lastCaracter!='?')&&(lastCaracter!=' ')&&(lastCaracter!=';'))
                 {
                     NbMots+=1;
                 }
