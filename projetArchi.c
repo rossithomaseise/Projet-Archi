@@ -49,8 +49,7 @@
             {
                 if ((caractereActuel=='\n'))
                 {
-                    if ((lastCaracter=='?')||(lastCaracter=='!')||(lastCaracter=='\n'));
-                    else
+                    if ((lastCaracter!='?')&&(lastCaracter!='!')&&(lastCaracter!='\n'))
                     {
                         NbMots+=1;
                     }
