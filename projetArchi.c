@@ -27,34 +27,35 @@
         {
             caractereActuel = fgetc(fichier);   // On lit le caractère
 
-            if ((caractereActuel=='\n')||(TempLigne==NbCaracLigne))
+            if ((caractereActuel=='\n')||(TempLigne==NbCaracLigne))     //Compteur de lignes
             {
             	NbLignes+=1;
             	TempLigne=0;
             	TempPage+=1;
             }
 
-            if (TempPage==NbLignesPage)
+            if (TempPage==NbLignesPage)                                 //Compteur de pages
             {
             	NbPages+=1;
             	TempPage=0;
             }
 
-            if ((caractereActuel=='.')||(caractereActuel=='!')||(caractereActuel=='?'))
+            if ((caractereActuel=='.')||(caractereActuel=='!')||(caractereActuel=='?'))     //Compteur de phrases
             {
                 NbPhrases+=1;
             }
 
-            if ((caractereActuel=='.')||(caractereActuel==' ')||(caractereActuel=='\n'))     
+            if ((caractereActuel=='.')||(caractereActuel==' ')||(caractereActuel=='\n'))    //Compteur de mots
             {
                 if ((caractereActuel=='\n'))
                 {
                     if ((lastCaracter!='?')&&(lastCaracter!='!')&&(lastCaracter!='\n'))
+                                                            //attention quand on saute une ligne ne pas confondre le dernier caratere
                     {
                         NbMots+=1;
                     }
                 }
-                else if ((lastCaracter!='!')&&(lastCaracter!='?')&&(lastCaracter!=' ')&&(lastCaracter!=';'))
+                else if ((lastCaracter!='!')&&(lastCaracter!='?')&&(lastCaracter!=' ')&&(lastCaracter!=';'))    // '!' '?' ';'' ' ' ne sont pas des mots 
                 {
                     NbMots+=1;
                 }
